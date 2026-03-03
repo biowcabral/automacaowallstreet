@@ -188,8 +188,7 @@ export default function AutoFlow() {
                     {/* Live indicator */}
                     {isLit && (
                       <div style={{
-                        position: "absolute", top: 14, right: isLeft ? "auto" : "auto",
-                        left: isLeft ? "auto" : "auto",
+                        position: "absolute", top: 14,
                         ...(isLeft ? { left: 20 } : { right: 20 }),
                         display: "flex", alignItems: "center", gap: 5,
                       }}>
