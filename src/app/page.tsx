@@ -2,7 +2,6 @@ import Ticker from "./components/Ticker";
 import Hero from "./components/Hero";
 import PenSell from "./components/PenSell";
 import PenScene from "./components/PenScene";
-import NeuroBrains from "./components/NeuroBrains";
 import AutoFlow from "./components/AutoFlow";
 import Results from "./components/Results";
 import FinalCTA from "./components/FinalCTA";
@@ -14,7 +13,6 @@ export default function Home() {
       <Hero />
       <PenSell />
       <PenScene />
-      <NeuroBrains />
       <AutoFlow />
       <Results />
       <FinalCTA />
