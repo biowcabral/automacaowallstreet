@@ -180,7 +180,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   };
 
   if (visual === "exit") return (
-    <div style={{ ...base, position: "absolute", top: "10%", right: "5%", zIndex: 6 }}>
+    <div style={{ ...base, position: "absolute", top: "10%", right: "5%", zIndex: 10 }}>
       <div style={{
         background: "#1a0808", border: "1px solid rgba(239,68,68,0.4)",
         borderRadius: 12, padding: "14px 18px", maxWidth: 220,
@@ -197,7 +197,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "counter") return (
-    <div style={{ ...base, position: "absolute", top: "10%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 6, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "58%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
       <div style={{
         background: "#140900", border: `1px solid ${color}55`,
         borderRadius: 12, padding: "12px 28px", textAlign: "center",
@@ -214,7 +214,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "crowd") return (
-    <div style={{ ...base, position: "absolute", top: "10%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 6, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "58%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
       <div style={{
         background: "#000d1a", border: `1px solid ${color}44`,
         borderRadius: 12, padding: "12px 22px",
@@ -236,7 +236,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "gift") return (
-    <div style={{ ...base, position: "absolute", top: "10%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 6, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "58%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
       <div style={{
         background: "#001409", border: `1px solid ${color}44`,
         borderRadius: 14, padding: "16px 24px", textAlign: "center",
@@ -253,7 +253,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "badges") return (
-    <div style={{ ...base, position: "absolute", top: "10%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 6, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "58%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center", maxWidth: 340 }}>
         {["Forbes ↗", "Y Combinator", "G2 #1 · 2025", "2,400+ clients", "ISO 9001", "SOC 2"].map((b, i) => (
           <span key={b} style={{
@@ -269,7 +269,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "timer") return (
-    <div style={{ ...base, position: "absolute", top: "10%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 6, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "58%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
       <div style={{
         background: "#08001a", border: `1px solid ${color}55`,
         borderRadius: 14, padding: "16px 32px", textAlign: "center",
