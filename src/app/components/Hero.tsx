@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import GlitchText from "./GlitchText";
 
 // Pre-determined dollar positions (avoids hydration mismatch)
 const DOLLARS = Array.from({ length: 28 }, (_, i) => ({
@@ -120,7 +121,12 @@ export default function Hero() {
           color: "#F97316", textTransform: "uppercase", marginBottom: 24,
           opacity: wordIdx >= 0 ? 1 : 0, transition: "opacity 0.4s",
         }}>
-          Jordan Belfort · 1987 · The Question That Changed Sales Forever
+          <GlitchText
+            text="Jordan Belfort · 1987 · The Question That Changed Sales Forever"
+            delay={400}
+            speed={28}
+            style={{ color: "#F97316", letterSpacing: "0.22em", textTransform: "uppercase", fontSize: 12 }}
+          />
         </p>
 
         {/* Hero headline — word by word */}

@@ -132,3 +132,21 @@ body {
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #111; }
 ::-webkit-scrollbar-thumb { background: #F97316; border-radius:2px; }
+
+/* Custom cursor — hidden in favor of CursorGlow component */
+* { cursor: none !important; }
+a, button, [role="button"], input, select, textarea { cursor: none !important; }
+
+/* Grain shift animation */
+@keyframes grain-shift {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-1px, 2px); }
+  40%  { transform: translate(2px, -1px); }
+  60%  { transform: translate(-2px, 1px); }
+  80%  { transform: translate(1px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+.grain-layer {
+  animation: grain-shift 0.35s steps(2) infinite;
+}

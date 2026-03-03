@@ -413,9 +413,60 @@ function SoldStamp({ visible }: { visible: boolean }) {
 /* ─────────────────────────────────────────────
    MAIN COMPONENT
    ───────────────────────────────────────────── */
+interface Particle {
+  x: number; y: number; vx: number; vy: number;
+  life: number; maxLife: number; color: string; size: number;
+}
+
 export default function PenSell() {
   const outerRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
+
+  // ── Particle burst canvas ──
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const prevStageRef = useRef(-1);
+  const particlesRef = useRef<Particle[]>([]);
+  const rafParticleRef = useRef(0);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+    const tick = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesRef.current = particlesRef.current.filter(p => p.life > 0);
+      for (const p of particlesRef.current) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.20;
+        p.vx *= 0.97;
+        p.life -= 1;
+        const alpha = p.life / p.maxLife;
+        ctx.save();
+        ctx.globalAlpha = alpha * 0.9;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * (0.3 + alpha * 0.7), 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = p.color;
+        ctx.fill();
+        ctx.restore();
+      }
+      rafParticleRef.current = requestAnimationFrame(tick);
+    };
+    tick();
+    return () => {
+      window.removeEventListener("resize", resize);
+      cancelAnimationFrame(rafParticleRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const fn = () => {
@@ -437,6 +488,31 @@ export default function PenSell() {
   const stage = Math.min(7, Math.floor(rawStage));
   const stageProgress = rawStage - stage;
 
+  // Burst particles from pen tip on every trigger stage entry
+  useEffect(() => {
+    if (stage === prevStageRef.current) return;
+    prevStageRef.current = stage;
+    if (stage < 1 || stage > 6) return;
+    const t = TRIGGERS[stage - 1];
+    const penX = window.innerWidth / 2;
+    const penY = window.innerHeight * 0.08 + 230;
+    const count = 32;
+    for (let i = 0; i < count; i++) {
+      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
+      const speed = 2.5 + Math.random() * 6;
+      particlesRef.current.push({
+        x: penX + (Math.random() - 0.5) * 12,
+        y: penY + (Math.random() - 0.5) * 12,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - 2.5,
+        life: 60 + Math.random() * 40,
+        maxLife: 100,
+        color: t.color,
+        size: 2 + Math.random() * 4,
+      });
+    }
+  }, [stage]);
+
   const triggerIdx = stage >= 1 && stage <= 6 ? stage - 1 : -1;
   const currentTrigger = triggerIdx >= 0 ? TRIGGERS[triggerIdx] : null;
   const isSold = stage >= 7;
@@ -451,6 +527,13 @@ export default function PenSell() {
         overflow: "hidden",
         display: "flex", alignItems: "center", justifyContent: "center",
       }}>
+        {/* Particle burst canvas */}
+        <canvas ref={canvasRef} style={{
+          position: "absolute", inset: 0,
+          width: "100%", height: "100%",
+          pointerEvents: "none", zIndex: 13,
+        }} />
+
         {/* Dynamic atmosphere */}
         <div style={{
           position: "absolute", inset: 0, pointerEvents: "none",

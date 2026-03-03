@@ -10,8 +10,20 @@ const GUARANTEES = [
 
 export default function FinalCTA() {
   const ref = useRef<HTMLDivElement>(null);
+  const btnRef = useRef<HTMLAnchorElement>(null);
   const [visible, setVisible] = useState(false);
   const [hovered, setHovered] = useState(false);
+
+  const onBtnMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const el = e.currentTarget;
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
+    const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
+    el.style.transform = `translate(${x}px, ${y}px) scale(1.06)`;
+  };
+  const onBtnLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.currentTarget.style.transform = "translate(0,0) scale(1)";
+  };
 
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -66,6 +78,33 @@ export default function FinalCTA() {
           </span>
         </div>
 
+        {/* SVG pen-stroke signature — draws on scroll-in */}
+        <div style={{
+          pointerEvents: "none", margin: "0 auto", width: "100%", maxWidth: 520, height: 48,
+          opacity: visible ? 1 : 0, transition: "opacity 0.3s ease 0.7s",
+        }}>
+          <svg viewBox="0 0 520 48" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", height: "100%" }}>
+            <path
+              d="M 10 32 C 60 10, 130 44, 200 24 S 320 6, 400 28 S 470 42, 510 20"
+              stroke="#F97316" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.35"
+              style={{
+                strokeDasharray: 600,
+                strokeDashoffset: visible ? 0 : 600,
+                transition: "stroke-dashoffset 2s cubic-bezier(0.4,0,0.2,1) 0.8s",
+              }}
+            />
+            <path
+              d="M 30 38 C 90 20, 160 52, 240 30 S 370 12, 440 34 S 490 46, 508 28"
+              stroke="#D97706" strokeWidth="0.9" strokeLinecap="round" fill="none" opacity="0.18"
+              style={{
+                strokeDasharray: 580,
+                strokeDashoffset: visible ? 0 : 580,
+                transition: "stroke-dashoffset 2.2s cubic-bezier(0.4,0,0.2,1) 1s",
+              }}
+            />
+          </svg>
+        </div>
+
         {/* Headline */}
         <h2 style={{
           fontSize: "clamp(2.8rem, 7vw, 5.5rem)", fontWeight: 900, lineHeight: 1.05,
@@ -97,11 +136,13 @@ export default function FinalCTA() {
           transition: "opacity 0.7s ease 0.35s, transform 0.7s ease 0.35s",
         }}>
           <a
+            ref={btnRef}
             href="https://wa.me/5511999999999?text=I+want+to+automate+my+sales+pipeline"
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            onMouseLeave={(e) => { setHovered(false); onBtnLeave(e); }}
+            onMouseMove={onBtnMove}
             style={{
               display: "inline-flex", alignItems: "center", gap: 12,
               padding: "20px 44px",
