@@ -374,7 +374,7 @@ function ScienceCard({ t, visible, side }: {
           </div>
           <div style={{ textAlign: "right" }}>
             <p style={{ fontSize: 11, color: "#22c55e", fontFamily: "monospace", fontWeight: 700 }}>{t.impact}</p>
-            <p style={{ fontSize: 9, color: "#4B5563" }}>avg. client result</p>
+            <p style={{ fontSize: 9, color: "#6B7280" }}>avg. client result</p>
           </div>
         </div>
       </div>
@@ -558,7 +558,7 @@ export default function PenSell() {
             textAlign: "center", zIndex: 10, pointerEvents: "none",
             opacity: 1, transition: "opacity 0.8s ease 0.6s",
           }}>
-            <p style={{ fontSize: 13, color: "#4B5563", fontFamily: "monospace", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>
+            <p style={{ fontSize: 13, color: "#9CA3AF", fontFamily: "monospace", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 8 }}>
               6 triggers · 1 pipeline · zero effort
             </p>
             <p style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 900, color: "#F97316", lineHeight: 1 }}>
@@ -579,7 +579,7 @@ export default function PenSell() {
             {/* Stage 0: intro */}
             <div style={{ opacity: stage === 0 ? 1 : 0, transition: "opacity 0.45s ease", position: "relative" }}>
               <p style={{ fontSize: "clamp(1.5rem, 3.8vw, 2.6rem)", fontWeight: 900, color: "#F8FAFC", lineHeight: 1.15 }}>
-                A pen.<br /><span style={{ color: "#374151" }}>Just a pen.</span>
+                A pen.<br /><span style={{ color: "#6B7280" }}>Just a pen.</span>
               </p>
               <p style={{ fontSize: 13, color: "#6B7280", marginTop: 12, lineHeight: 1.6 }}>
                 Jordan Belfort used six psychological triggers to sell it.<br />
@@ -668,7 +668,7 @@ export default function PenSell() {
           transition: "opacity 0.5s ease",
           pointerEvents: "none", zIndex: 10, textAlign: "center",
         }}>
-          <p style={{ fontSize: 9, color: "#374151", fontFamily: "monospace", letterSpacing: "0.22em", textTransform: "uppercase" }}>
+          <p style={{ fontSize: 9, color: "#9CA3AF", fontFamily: "monospace", letterSpacing: "0.22em", textTransform: "uppercase" }}>
             scroll to watch the pen sell
           </p>
           <div style={{ width: 1, height: 20, background: "linear-gradient(#F97316, transparent)", margin: "8px auto 0" }} />

@@ -169,7 +169,7 @@ export default function Results() {
           gap: 8, flexWrap: "wrap",
           opacity: visible ? 1 : 0, transition: "opacity 0.8s ease 0.9s",
         }}>
-          <span style={{ fontSize: 11, color: "#4B5563", fontFamily: "monospace", marginRight: 8 }}>DEPLOYED IN:</span>
+          <span style={{ fontSize: 11, color: "#6B7280", fontFamily: "monospace", marginRight: 8 }}>DEPLOYED IN:</span>
           {["SaaS", "E-commerce", "Real Estate", "Healthcare", "Education", "Finance", "Consulting", "Retail", "Legal", "Beauty"].map(ind => (
             <span key={ind} style={{
               fontSize: 10, color: "#6B7280", fontFamily: "monospace",

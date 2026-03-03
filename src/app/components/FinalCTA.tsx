@@ -148,12 +148,12 @@ export default function FinalCTA() {
             <span style={{ color: "#F97316", fontStyle: "normal", fontWeight: 700 }}>feel they need it</span>{" "}
             before you ever mention the price.&rdquo;
           </p>
-          <p style={{ marginTop: 12, fontSize: 12, color: "#4B5563", fontFamily: "monospace" }}>— Jordan Belfort, adapted for the automation era</p>
+          <p style={{ marginTop: 12, fontSize: 12, color: "#6B7280", fontFamily: "monospace" }}>— Jordan Belfort, adapted for the automation era</p>
         </div>
 
         {/* Footer credit */}
         <p style={{
-          marginTop: 60, fontSize: 11, color: "#374151", fontFamily: "monospace", letterSpacing: "0.1em",
+          marginTop: 60, fontSize: 11, color: "#6B7280", fontFamily: "monospace", letterSpacing: "0.1em",
           opacity: visible ? 1 : 0, transition: "opacity 0.8s ease 0.8s",
         }}>
           BUILT BY <span style={{ color: "#F97316" }}>CODING2U</span> · AUTOMATIONS THAT CLOSE DEALS
