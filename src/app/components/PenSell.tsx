@@ -214,7 +214,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "crowd") return (
-    <div style={{ ...base, position: "absolute", bottom: "14%", left: "50%", transform: "translateX(-50%)", zIndex: 6, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "10%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 6, pointerEvents: "none" }}>
       <div style={{
         background: "#000d1a", border: `1px solid ${color}44`,
         borderRadius: 12, padding: "12px 22px",
@@ -253,7 +253,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "badges") return (
-    <div style={{ ...base, position: "absolute", bottom: "14%", left: "50%", transform: "translateX(-50%)", zIndex: 6, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "10%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 6, pointerEvents: "none" }}>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center", maxWidth: 340 }}>
         {["Forbes ↗", "Y Combinator", "G2 #1 · 2025", "2,400+ clients", "ISO 9001", "SOC 2"].map((b, i) => (
           <span key={b} style={{
