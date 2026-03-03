@@ -236,7 +236,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "gift") return (
-    <div style={{ ...base, position: "absolute", top: "58%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "42%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
       <div style={{
         background: "#001409", border: `1px solid ${color}44`,
         borderRadius: 14, padding: "16px 24px", textAlign: "center",
@@ -269,7 +269,7 @@ function StageVisual({ visual, color, visible }: { visual: string; color: string
   );
 
   if (visual === "timer") return (
-    <div style={{ ...base, position: "absolute", top: "58%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
+    <div style={{ ...base, position: "absolute", top: "42%", left: "50%", transform: visible ? "translateX(-50%) scale(1)" : "translateX(-50%) scale(0.7)", zIndex: 10, pointerEvents: "none" }}>
       <div style={{
         background: "#08001a", border: `1px solid ${color}55`,
         borderRadius: 14, padding: "16px 32px", textAlign: "center",
