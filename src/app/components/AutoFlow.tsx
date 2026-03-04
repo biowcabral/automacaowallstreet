@@ -9,7 +9,7 @@ const NODES = [
     label: "Visitor Arrives",
     sub: "Anonymous intent detected",
     color: "#6B7280",
-    detail: "UTM source, referrer, device, geo and time-of-day logged immediately. Behavioral fingerprint starts building.",
+    detail: "UTM source, referrer, device, geo and time-of-day logged immediately. Behavioral fingerprint construction begins.",
   },
   {
     id: "profile",
@@ -33,7 +33,7 @@ const NODES = [
     label: "Personalized Sequence",
     sub: "WhatsApp · Email · Retargeting",
     color: "#34D399",
-    detail: "Multi-channel sequence launches: WhatsApp with the prospect's name and pain point, email with matched case study, retargeting ad with the trigger asset.",
+    detail: "Multi-channel sequence fires: WhatsApp with the lead's name and pain point, email with profile-matched case, retargeting ad with trigger asset.",
   },
   {
     id: "objection",
@@ -41,7 +41,7 @@ const NODES = [
     label: "AI Handles Objections",
     sub: "24/7 chatbot + voice",
     color: "#A78BFA",
-    detail: "Every common objection has a pre-trained response. AI responds instantly — no rep needed. Escalates to human only when deal is 90%+ ready to close.",
+    detail: "Every common objection has a pre-trained response. AI responds instantly — no rep needed. Escalates to human only when the deal is 90%+ ready to close.",
   },
   {
     id: "close",
@@ -49,7 +49,7 @@ const NODES = [
     label: "Sale Closes",
     sub: "Payment link auto-sent",
     color: "#D97706",
-    detail: "Purchase confirmation detected. Receipt, onboarding and welcome sequence fires within 60 seconds. CRM updated, team notified.",
+    detail: "Purchase confirmed. Receipt, onboarding and welcome sequence fires within 60 seconds. CRM updated, team notified.",
   },
   {
     id: "upsell",
@@ -57,7 +57,7 @@ const NODES = [
     label: "Upsell Triggers",
     sub: "Revenue per customer ↑",
     color: "#F97316",
-    detail: "Post-purchase satisfaction window (72h) triggers upsell sequence. Cross-sell based on purchase history. Referral ask at peak happiness moment.",
+    detail: "Post-purchase satisfaction window (72h) fires upsell sequence. Cross-sell based on purchase history. Referral ask at peak happiness moment.",
   },
 ];
 

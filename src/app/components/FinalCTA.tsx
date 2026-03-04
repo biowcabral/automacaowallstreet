@@ -124,9 +124,9 @@ export default function FinalCTA() {
           marginTop: 24, fontSize: "clamp(1rem, 2.2vw, 1.15rem)", color: "#9CA3AF", lineHeight: 1.7, maxWidth: 560, margin: "24px auto 0",
           opacity: visible ? 1 : 0, transition: "opacity 0.7s ease 0.25s",
         }}>
-          Jordan Belfort built a $50M sales machine with charm and hustle.{" "}
-          You&apos;ll build yours with automation, neuroscience and AI &mdash;{" "}
-          and it won&apos;t call in sick, forget to follow up, or lose a lead.
+          The world&apos;s greatest closers built $50M machines with charm and hustle.{" "}
+          You&apos;ll build yours with a strategic landing page &mdash;{" "}
+          and it won&apos;t take holidays, forget to follow up, or lose a lead.
         </p>
 
         {/* CTA button */}
@@ -137,7 +137,7 @@ export default function FinalCTA() {
         }}>
           <a
             ref={btnRef}
-            href="https://wa.me/5511999999999?text=I+want+to+automate+my+sales+pipeline"
+            href="https://wa.me/5511999999999?text=I+want+a+page+like+this"
             target="_blank"
             rel="noopener noreferrer"
             onMouseEnter={() => setHovered(true)}
@@ -160,7 +160,7 @@ export default function FinalCTA() {
             }}
           >
             <span style={{ fontSize: 20 }}>📲</span>
-            Book My Strategy Call — Free
+            Book My Strategy Call — $597 CAD
             <span style={{ fontSize: 18, transform: hovered ? "translateX(4px)" : "none", transition: "transform 0.2s ease" }}>→</span>
           </a>
         </div>
@@ -189,7 +189,7 @@ export default function FinalCTA() {
             <span style={{ color: "#F97316", fontStyle: "normal", fontWeight: 700 }}>feel they need it</span>{" "}
             before you ever mention the price.&rdquo;
           </p>
-          <p style={{ marginTop: 12, fontSize: 12, color: "#6B7280", fontFamily: "monospace" }}>— Jordan Belfort, adapted for the automation era</p>
+          <p style={{ marginTop: 12, fontSize: 12, color: "#6B7280", fontFamily: "monospace" }}>— The psychology of closing, applied to the landing page era</p>
         </div>
 
         {/* Footer credit */}
@@ -197,7 +197,7 @@ export default function FinalCTA() {
           marginTop: 60, fontSize: 11, color: "#6B7280", fontFamily: "monospace", letterSpacing: "0.1em",
           opacity: visible ? 1 : 0, transition: "opacity 0.8s ease 0.8s",
         }}>
-          BUILT BY <span style={{ color: "#F97316" }}>CODING2U</span> · AUTOMATIONS THAT CLOSE DEALS
+          BUILT BY <span style={{ color: "#F97316" }}>CODING2U</span> · LANDING PAGES THAT CLOSE DEALS
         </p>
       </div>
     </section>

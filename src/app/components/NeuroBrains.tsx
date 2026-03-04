@@ -11,11 +11,11 @@ const TRIGGERS = [
     tag: "Kahneman & Tversky, 1979",
     title: "Loss Aversion",
     science: "The brain processes losses 2.5× more intensely than equivalent gains. Fear of losing activates the amygdala — bypassing rational thought entirely.",
-    how: "Exit-intent automation detects cursor velocity toward the browser bar. In that exact 0.3-second window, a personalized message fires: \"You're leaving $4,200 on the table every month without this.\" Calculated dynamically per visitor.",
+    how: "A well-built LP opens with the right pain: 'Every month without this is revenue going to a competitor.' Not manipulation — strategic honesty. The visitor already feels the cost before they see the price.",
     stat: "2.5×",
     statLabel: "stronger than gain",
-    trigger: "Exit-intent + behavioral velocity",
-    impact: "+47% recovered cart abandonments",
+    trigger: "Pain-first opening + cost of inaction",
+    impact: "+47% top-of-funnel conversions",
   },
   {
     id: "scarcity",
@@ -25,11 +25,11 @@ const TRIGGERS = [
     tag: "Cialdini, Influence — 1984",
     title: "Scarcity",
     science: "Rare = valuable. The limbic brain equates limited availability with quality. Scarcity triggers dopamine release — the same circuit as desire and reward.",
-    how: "Inventory tracking automation monitors real stock. When units drop below threshold, \"Only 3 left\" fires across email, SMS, retargeting and on-page simultaneously. Real scarcity, amplified at scale.",
+    how: "Your LP uses exclusive positioning and real scarcity. Not a fake timer — genuine selection. 'We take X projects per month' creates desire to be among the chosen before the price even appears.",
     stat: "82%",
-    statLabel: "faster decisions under scarcity",
-    trigger: "Inventory threshold + multi-channel blast",
-    impact: "+61% conversion lift on offers",
+    statLabel: "faster decisions",
+    trigger: "Exclusive positioning + real selection",
+    impact: "+61% conversion rate",
   },
   {
     id: "social",
@@ -38,12 +38,12 @@ const TRIGGERS = [
     glow: "rgba(96,165,250,0.2)",
     tag: "Cialdini · Social Proof",
     title: "Social Proof",
-    science: "Under uncertainty, humans defer to group behavior as a cognitive shortcut. \"If 847 people are looking at this, it must be valuable\" — the brain calculates safety in numbers.",
-    how: "Live visitor aggregation automation displays real-time counts, recent purchase notifications and behavior-matched testimonials — served by AI based on the prospect's exact industry, company size and pain point.",
+    science: "Under uncertainty, humans follow group behavior as a cognitive shortcut. 'If 847 people are here, it must be worth it' — the brain calculates safety in numbers.",
+    how: "Strategic social proof positioned at the exact moment of doubt: testimonials from the right sector, results from the right profile, real client numbers. Not decoration — a sales argument.",
     stat: "63%",
-    statLabel: "of consumers trust peer review",
-    trigger: "Real-time visitor tracking + AI matching",
-    impact: "+38% trust score in cold audiences",
+    statLabel: "trust peer proof",
+    trigger: "Profile-matched testimonials + real numbers",
+    impact: "+38% trust in cold audiences",
   },
   {
     id: "reciprocity",
@@ -52,12 +52,12 @@ const TRIGGERS = [
     glow: "rgba(52,211,153,0.2)",
     tag: "Cialdini · Reciprocity",
     title: "Reciprocity",
-    science: "Receiving a gift creates a psychological debt the brain urgently wants to repay. The bigger and more unexpected the gift, the stronger the compulsion to reciprocate.",
-    how: "Lead magnet automation delivers significant free value (personalized ROI report, industry audit, tool) within 60 seconds of first contact — before any ask. The follow-up sequence then arrives when the debt is at its peak.",
+    science: "Receiving a gift creates a psychological debt the brain urgently wants to repay. The bigger and more unexpected, the stronger the compulsion to reciprocate.",
+    how: "Your LP delivers genuinely useful value before any offer — a diagnosis, a number, a new perspective. The visitor leaves with something. The debt was created before the CTA appeared.",
     stat: "3.1×",
-    statLabel: "higher response to post-gift ask",
-    trigger: "First-touch → instant value delivery",
-    impact: "+219% email reply rate post-gift",
+    statLabel: "higher response post-gift",
+    trigger: "First-touch → real value delivery",
+    impact: "+219% response rate",
   },
   {
     id: "authority",
@@ -66,26 +66,26 @@ const TRIGGERS = [
     glow: "rgba(217,119,6,0.2)",
     tag: "Milgram · Authority Principle",
     title: "Authority",
-    science: "The brain uses authority as a heuristic to reduce cognitive load. Expert signals — credentials, logos, case studies — short-circuit the 'why should I trust you?' objection before it's raised.",
-    how: "Behavior-profiling automation identifies the visitor's industry and company size, then dynamically serves the most relevant proof: the right logos, the right case study, the right result. The perfect credential at the perfect moment.",
+    science: "The brain uses authority as a heuristic to reduce cognitive load. Expert signals — credentials, logos, case studies — short-circuit doubt before it crystallizes.",
+    how: "Your LP shows the right logos, the right numbers, the right cases — for the right visitor type. Credibility appears before the trust objection can arise. Authority positioned, not decorated.",
     stat: "92%",
-    statLabel: "of buyers influenced by authority signals",
-    trigger: "Visitor profile → AI-matched proof",
-    impact: "+54% reduction in sales cycle length",
+    statLabel: "influenced by authority signals",
+    trigger: "Credentials aligned to visitor profile",
+    impact: "−54% decision cycle",
   },
   {
     id: "urgency",
     icon: "⚡",
     color: "#A78BFA",
     glow: "rgba(167,139,250,0.2)",
-    tag: "Temporal Discounting Theory",
+    tag: "Temporal Discounting · Cost of Inaction",
     title: "Urgency",
-    science: "The brain sharply discounts future rewards. A deadline triggers the prefrontal cortex to prioritize NOW over later — interrupting the procrastination loop that kills most deals.",
-    how: "Dynamic deadline automation creates real, enforced time constraints — not fake timers. Each prospect gets a personalized deadline based on their behavior. Miss it, the offer changes. The urgency is genuine, and the brain knows it.",
+    science: "The brain sharply discounts future rewards. A real deadline triggers the prefrontal cortex to prioritize NOW over later — breaking the procrastination loop that kills most deals.",
+    how: "No fake countdown. There's the real cost: how many clients did your competitor close while your site wasn't converting? A great LP makes that math visible — and urgent.",
     stat: "67%",
-    statLabel: "of purchases made within deadline window",
-    trigger: "Behavioral deadline engine + enforcement",
-    impact: "+73% deals closed on first offer",
+    statLabel: "purchases within deadline",
+    trigger: "Cost of inaction + real moment of urgency",
+    impact: "+73% closes on first offer",
   },
 ];
 
@@ -137,7 +137,7 @@ export default function NeuroBrains() {
               opacity: visible ? 1 : 0, transition: "opacity 0.7s ease 0.2s",
             }}
           >
-            Peer-reviewed psychology, weaponised by automation. Each trigger fires at the exact neurological moment it has maximum impact.
+            Peer-reviewed psychology, applied strategically in every section of your landing page. Each trigger fires at the exact neurological moment of maximum impact.
           </p>
         </div>
 
@@ -193,7 +193,7 @@ export default function NeuroBrains() {
                   background: "rgba(0,0,0,0.4)", borderRadius: 10, padding: "14px 16px", marginBottom: 16,
                   borderLeft: `3px solid ${t.color}`,
                 }}>
-                  <p style={{ fontSize: 11, color: t.color, fontFamily: "monospace", letterSpacing: "0.08em", marginBottom: 6 }}>AUTOMATION FIRES:</p>
+                  <p style={{ fontSize: 11, color: t.color, fontFamily: "monospace", letterSpacing: "0.08em", marginBottom: 6 }}>ON YOUR LANDING PAGE:</p>
                   <p style={{ fontSize: 13, color: "#D1D5DB", lineHeight: 1.65 }}>{t.how}</p>
                 </div>
 
@@ -229,8 +229,8 @@ export default function NeuroBrains() {
           }}
         >
           <p style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", fontWeight: 700, color: "#F8FAFC", lineHeight: 1.5 }}>
-            Jordan Belfort used these triggers manually.<br />
-            <span style={{ color: "#F97316" }}>You can fire all six simultaneously — for every visitor — automatically.</span>
+            The world's top closers use these triggers one at a time.<br />
+            <span style={{ color: "#F97316" }}>Your landing page fires all six simultaneously — for every visitor — without any manual effort.</span>
           </p>
         </div>
       </div>

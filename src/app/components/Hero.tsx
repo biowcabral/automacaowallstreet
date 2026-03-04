@@ -122,7 +122,7 @@ export default function Hero() {
           opacity: wordIdx >= 0 ? 1 : 0, transition: "opacity 0.4s",
         }}>
           <GlitchText
-            text="Jordan Belfort · 1987 · The Question That Changed Sales Forever"
+            text="Wall Street · 1987 · The question this page just answered for you"
             delay={400}
             speed={28}
             style={{ color: "#F97316", letterSpacing: "0.22em", textTransform: "uppercase", fontSize: 12 }}
@@ -164,7 +164,7 @@ export default function Hero() {
           style={{
             fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
             color: "#9CA3AF",
-            maxWidth: 620,
+            maxWidth: 680,
             margin: "0 auto 40px",
             lineHeight: 1.7,
             opacity: subVisible ? 1 : 0,
@@ -172,9 +172,10 @@ export default function Hero() {
             transition: "opacity 0.6s ease, transform 0.6s ease",
           }}
         >
-          The question that stumped a room of top salespeople —{" "}
-          <span style={{ color: "#F97316", fontWeight: 600 }}>automated, scaled and closing deals 24/7.</span>
-          {" "}No pitch. Just precision psychology.
+          <span style={{ color: "#F97316", fontWeight: 700 }}>This page just answered the question.</span>{" "}
+          You were convinced — without noticing, without resistance. Now imagine{" "}
+          <span style={{ color: "#F8FAFC", fontWeight: 600 }}>your product being sold like this.
+          </span>
         </p>
 
         {/* CTAs */}
@@ -202,7 +203,7 @@ export default function Hero() {
               letterSpacing: "0.02em",
             }}
           >
-            Sell My Pen Automatically →
+            Get My Page Like This →
           </a>
           <a
             href="#scene"
@@ -216,16 +217,16 @@ export default function Hero() {
               letterSpacing: "0.02em",
             }}
           >
-            See How It Works
+            How It Works
           </a>
         </div>
 
         {/* Micro-stats */}
         <div style={{ display: "flex", gap: 32, justifyContent: "center", marginTop: 56, flexWrap: "wrap" }}>
           {[
-            { n: "6.2×", label: "More deals closed" },
-            { n: "24/7", label: "Pipeline never sleeps" },
-            { n: "48h",  label: "Deploy & go live" },
+            { n: "8.3×",  label: "More Conversions" },
+            { n: "72h",   label: "Project Delivery" },
+            { n: "$0",    label: "To see our work" },
           ].map(s => (
             <div key={s.n} style={{ textAlign: "center" }}>
               <p style={{ fontSize: 24, fontWeight: 900, color: "#F97316", letterSpacing: "-0.02em" }}>{s.n}</p>

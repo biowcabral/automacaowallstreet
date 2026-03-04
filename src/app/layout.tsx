@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sell Me This Pen — Automate Your Sales | coding2u",
-  description: "Turn Jordan Belfort's $50M sales challenge into a 24/7 automated pipeline. Neuroscience triggers. AI sequences. Deals close while you sleep.",
+  description: "The 'sell me this pen' challenge — answered by this page. Neuroscience triggers. AI sequences. Deals close while you sleep.",
 };
 
 export default function RootLayout({

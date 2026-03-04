@@ -1,16 +1,16 @@
 "use client";
 
 const TICKERS = [
-  { sym: "LEAD", val: "+247%", up: true },
-  { sym: "CONV", val: "+94.3%", up: true },
-  { sym: "CAC",  val: "-61%",   up: false },
-  { sym: "LTV",  val: "+312%", up: true },
-  { sym: "CHURN",val: "-78%",   up: false },
-  { sym: "ROI",  val: "+847%", up: true },
-  { sym: "CLOSE",val: "+6.2x", up: true },
-  { sym: "DEALS",val: "+183%", up: true },
-  { sym: "NPS",  val: "+91pts",up: true },
-  { sym: "ARR",  val: "+420%", up: true },
+  { sym: "CONV",  val: "+340%",  up: true  },
+  { sym: "CPL",   val: "-58%",   up: false },
+  { sym: "TICKET",val: "+2.7×",  up: true  },
+  { sym: "BOUNCE", val: "-71%",  up: false },
+  { sym: "LEAD",  val: "+219%",  up: true  },
+  { sym: "ROI",   val: "+910%",  up: true  },
+  { sym: "CTA",   val: "+83%",   up: true  },
+  { sym: "SCROLL", val: "+4min", up: true  },
+  { sym: "TRUST", val: "+94pts", up: true  },
+  { sym: "CLOSE", val: "+6.8×",  up: true  },
 ];
 const ROW = [...TICKERS, ...TICKERS];
 

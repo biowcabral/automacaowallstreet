@@ -3,28 +3,28 @@
 import { useEffect, useRef, useState } from "react";
 
 const OLD_WAY = [
-  "\"It writes smoothly with a gold tip...\"",
-  "\"Premium ink lasts 6 months\"",
-  "\"It's on sale — only $12.99\"",
-  "\"Great build quality, very durable\"",
-  "Pushing features nobody asked for",
-  "Racing to prove value on price",
+  '"Our landing page looks great and is responsive"',
+  '"We have excellent customer support"',
+  '"Our price is accessible, worth the investment"',
+  '"Our product has lots of great features"',
+  "Listing features nobody asked for",
+  "Competing on price instead of creating value",
 ];
 
 const AUTO_WAY = [
-  "Identifies visitor intent in <200ms",
-  "\"When did you last miss a signature?\"",
-  "Fires scarcity trigger at the right second",
-  "Serves social proof matched to their profile",
-  "AI follows up if they hesitate at checkout",
-  "Closes. Re-engages. Upsells. Automatically.",
+  "Opens with the exact pain of the ideal visitor",
+  '"What is the cost of each month without a solution?"',
+  "Urgency trigger at precisely the right moment",
+  "Social proof aligned to the visitor's profile",
+  "CTA positioned where the decision was already made",
+  "Sells. Reconverts. Upsells. Itself.",
 ];
 
 const INSIGHT_STEPS = [
-  { icon: "🎯", title: "Don't pitch the pen", body: "Most salespeople list features. The prospect doesn't care about the ink type — they care about what not having a pen costs them." },
-  { icon: "🧠", title: "Create the need first", body: "Jordan's real answer was never about the pen. It was about manufacturing desire through scarcity: \"Write down my number\" — then there's no pen." },
-  { icon: "⚡", title: "Automation fires the trigger", body: "The exact psychological moment when need is felt — that's when automation strikes. Not when you get around to following up. Right then." },
-  { icon: "📈", title: "Scale it infinitely", body: "One human can feel the room once. Automation reads behavioral signals from thousands of people simultaneously and triggers the perfect response for each." },
+  { icon: "🎯", title: "Don't sell the pen", body: "Most pages list features. The visitor doesn't want to know about the product — they want to know what it costs NOT to have it. A great LP opens with that cost." },
+  { icon: "🧠", title: "Create the need first", body: "Belfort's answer was never about the pen. It was about manufacturing desire through scarcity: 'Write down my number' — then there's no pen. Your LP does the same." },
+  { icon: "⚡", title: "Every section fires a trigger", body: "The exact psychological moment when the need is felt — that's where the copy strikes. Not when you edit the text. Right now, as they read." },
+  { icon: "📈", title: "Scale to any offer", body: "A salesperson reads the room once. A well-built LP reads signals from thousands of visitors and delivers the right answer to each one — simultaneously." },
 ];
 
 export default function PenScene() {
@@ -58,8 +58,8 @@ export default function PenScene() {
             opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(24px)",
             transition: "opacity 0.7s ease, transform 0.7s ease",
           }}>
-            The Question That Stumped{" "}
-            <span className="text-orange-grad">Every Salesperson in the Room</span>
+            The Question This Page{" "}
+            <span className="text-orange-grad">Already Answered</span>
           </h2>
         </div>
 
@@ -84,11 +84,11 @@ export default function PenScene() {
           </p>
           <div style={{ marginTop: 20, display: "flex", alignItems: "center", justifyContent: "center", gap: 12 }}>
             <div style={{ width: 40, height: 1, background: "rgba(249,115,22,0.3)" }} />
-            <span style={{ fontSize: 12, color: "#6B7280", letterSpacing: "0.12em" }}>JORDAN BELFORT · WALL STREET</span>
+            <span style={{ fontSize: 12, color: "#6B7280", letterSpacing: "0.12em" }}>THE CLASSIC CLOSE · WALL STREET</span>
             <div style={{ width: 40, height: 1, background: "rgba(249,115,22,0.3)" }} />
           </div>
           <p style={{ marginTop: 20, fontSize: 15, color: "#9CA3AF", maxWidth: 560, margin: "20px auto 0" }}>
-            A room full of salespeople. None answered correctly. The pen was never the point.
+            A room full of salespeople. None got it right. The pen was never the point.
           </p>
         </div>
 
@@ -104,11 +104,11 @@ export default function PenScene() {
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
               <span style={{ fontSize: 20 }}>❌</span>
               <span style={{ fontWeight: 800, fontSize: 15, color: "#ef4444", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-                The Old Way — Feature Pitch
+                The Old Way — Feature Lists
               </span>
             </div>
             <p style={{ fontSize: 11, color: "#6B7280", marginBottom: 20, fontFamily: "monospace", letterSpacing: "0.08em" }}>
-              WHAT MOST SALESPEOPLE ACTUALLY SAY:
+              WHAT MOST PAGES DO:
             </p>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 12 }}>
               {OLD_WAY.map((item, i) => (
@@ -128,7 +128,7 @@ export default function PenScene() {
               ))}
             </ul>
             <div style={{ marginTop: 24, padding: "12px 16px", background: "rgba(239,68,68,0.08)", borderRadius: 8, borderLeft: "3px solid rgba(239,68,68,0.4)" }}>
-              <p style={{ fontSize: 12, color: "#ef4444" }}>Result: 12% conversion rate. Burnout. Price wars. Churn.</p>
+              <p style={{ fontSize: 12, color: "#ef4444" }}>Result: 2% conversion. Quotes ignored. Price war.</p>
             </div>
           </div>
 
@@ -142,11 +142,11 @@ export default function PenScene() {
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 24 }}>
               <span style={{ fontSize: 20 }}>⚡</span>
               <span style={{ fontWeight: 800, fontSize: 15, color: "#F97316", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-                The Automation Way — Need Creation
+                The Right Way — Creating Need
               </span>
             </div>
             <p style={{ fontSize: 11, color: "#6B7280", marginBottom: 20, fontFamily: "monospace", letterSpacing: "0.08em" }}>
-              WHAT AUTOMATION DOES INSTEAD:
+              WHAT A GREAT LP DOES:
             </p>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 12 }}>
               {AUTO_WAY.map((item, i) => (
@@ -164,7 +164,7 @@ export default function PenScene() {
               ))}
             </ul>
             <div style={{ marginTop: 24, padding: "12px 16px", background: "rgba(34,197,94,0.06)", borderRadius: 8, borderLeft: "3px solid rgba(34,197,94,0.4)" }}>
-              <p style={{ fontSize: 12, color: "#22c55e" }}>Result: 74% conversion on qualified leads. 24/7. Zero burnout.</p>
+              <p style={{ fontSize: 12, color: "#22c55e" }}>Result: up to 8× higher conversion. No manual effort. 24/7.</p>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function PenScene() {
         {/* Insight steps */}
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <p style={{ fontFamily: "monospace", fontSize: 11, letterSpacing: "0.2em", color: "#F97316", textTransform: "uppercase" }}>
-            The Belfort Framework — Automated
+            The Belfort Method — In a Landing Page
           </p>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 20 }}>
